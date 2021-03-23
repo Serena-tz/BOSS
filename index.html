@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOSS后台管理系统</title>
+    <!-- 网站图标 -->
+    <link rel="icon" href="image/web.ico">
+    <!-- 重置样式 -->
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- 图标字体 -->
+    <link rel="stylesheet" href="css/font/iconfont.css">
+    <!-- 本页样式 -->
+    <link rel="stylesheet" href="css/index.css">
+    <!-- jq -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <!-- 弹出层 -->
+    <link rel="stylesheet" href="js/layer/theme/default/layer.css">
+    <script src="js/layer/layer.js"></script>
+    
+</head>
+
+<body>
+    <!-- 页面主体 -->
+    <div class="main clearfix">
+        <!-- 左侧导航 -->
+        <div class="nav fl">
+            <div class="inner">
+                <div class="logo fl"></div>
+            <a href="javascript:;" class="top-btn tc block layout">
+                <span class="iconfont icon-caidan white"></span>
+            </a>
+            <div class="list-wrap">
+                <div class="list">
+                    <div class="title">
+                        <a class="font18 white inline" href="javascript:;">
+                            <span class="iconfont icon-xiala" style="font-size: 22px;"></span>
+                            撮合管理
+                        </a>
+                    </div>
+                    <ul class="item">
+                        <li>
+                            <a class="font14 a0" index="0" href="javascript:;">
+                                <span class="iconfont icon-qingdan" style="font-size: 20px;"></span>
+                                需求池
+                            </a>
+                        </li>
+                        <li>
+                            <a class="font14 a1" index="1" href="javascript:;">
+                                <span class="iconfont icon-mingxiqingdanlei" style="font-size: 20px;"></span>
+                                现货清单
+                            </a>
+                        </li>
+                        <li>
+                            <a class="font14 a2" index="2" href="javascript:;">
+                                <span class="iconfont icon-luru-xianxing" style="font-size: 20px;"></span>
+                                录入产品
+                            </a>
+                        </li>
+                        <li>
+                            <a class="font14 a3" index="3" href="javascript:;">
+                                <span class="iconfont icon-daochuexcel" style="font-size: 20px;"></span>
+                                帮客户传EXCEL
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <div class="title">
+                        <a class="font18 white inline" href="javascript:;">
+                            <span class="iconfont icon-xiala" style="font-size: 22px;"></span>
+                            订单管理
+                        </a>
+                    </div>
+                    <ul class="item">
+                        <li>
+                            <a class="font14 a4" index="4" href="javascript:;">
+                                <span class="iconfont icon-liebiao" style="font-size: 20px;"></span>
+                                预订单列表
+                            </a>
+                        </li>
+                        <li>
+                            <a class="font14 a5" index="5" href="javascript:;">
+                                <span class="iconfont icon-yudingshibai" style="font-size: 20px;"></span>
+                                失效订单
+                            </a>
+                        </li>
+                        <li>
+                            <a class="font14 a6" index="6" href="javascript:;">
+                                <span class="iconfont icon-yewubaobiao" style="font-size: 20px;"></span>
+                                订单列表
+                            </a>
+                        </li>
+                        <li>
+                            <a class="font14 a7" index="7" href="javascript:;">
+                                <span class="iconfont icon-chakanpingzheng" style="font-size: 20px;"></span>
+                                查看凭证
+                            </a>
+                        </li>
+                        <li>
+                            <a class="font14 a8" index="8" href="javascript:;">
+                                <span class="iconfont icon-yunshuche" style="font-size: 20px;"></span>
+                                自营订单列表
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <div class="title">
+                        <a class="font18 white inline" href="javascript:;">
+                            <span class="iconfont icon-xiala" style="font-size: 22px;"></span>
+                            统计报表
+                        </a>
+                    </div>
+                    <ul class="item">
+                        <li>
+                            <a class="font14 a9" index="9" href="javascript:;">
+                                <span class="iconfont icon-tongji" style="font-size: 20px;"></span>
+                                业务统计
+                            </a>
+                        </li>
+                        <li>
+                            <a class="font14 a10" index="10" href="javascript:;">
+                                <span class="iconfont icon-tongji1" style="font-size: 20px;"></span>
+                                客户成单统计
+                            </a>
+                        </li>
+                        <li>
+                            <a class="font14 a11" index="11" href="javascript:;">
+                                <span class="iconfont icon-kehu" style="font-size: 20px;"></span>
+                                客户维护统计
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- 右侧内容 -->
+        <div class="content fl">
+                <div class="header clearfix">
+                    <!-- 菜单列表 -->
+                    <ul class="menu clearfix fl">
+                        <li class="fl">
+                            <a class="inline white font18 tc" href="javascript:;">
+                                云服务管理平台
+                            </a>
+                        </li>
+                        <li class="fl">
+                            <a class="inline white font16 tc clearfix" href="javascript:;">
+                                <span class="iconfont icon-diannao fl"></span>
+                                <div class="fl text font16">
+                                    <p>WORKSHOP</p>
+                                    <p>个人工作台</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="fl">
+                            <a class="inline white font16 tc clearfix on" href="javascript:;">
+                                <span class="iconfont icon-13 fl"></span>
+                                <div class="fl text font16">
+                                    <p>BOSS</p>
+                                    <p>业务运营支持</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="fl">
+                            <a class="inline white font16 tc clearfix" href="javascript:;">
+                                <span class="iconfont icon-guanxi fl"></span>
+                                <div class="fl text font16">
+                                    <p>CRM</p>
+                                    <p>客户关系管理</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- 个人账户 -->
+                    <ul class="self white fr clearfix">
+                        <li class="fl userli pore">
+                            <a class="inline font14 white" href="javascript:;">
+                                <span class="iconfont icon-geren font22"></span>
+                                欢迎您：
+                                <span>snto</span>
+                            </a>
+                            <ul class="box pt10 pb10">
+                                <li><a class="tc" href="#">个人资料</a></li>
+                                <li><a class="tc" href="#">组织构架</a></li>
+                                <li><a class="tc" href="#">权限分配</a></li>
+                                <li><a class="tc" href="#">用户管理</a></li>
+                            </ul>
+                        </li>
+                        <li class="fl">
+                            <a class="inline font14 white" href="javascript:;">
+                                <span class="iconfont icon-guanji font22"></span>
+                                退出登录
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            <div class="pl20">
+                <!-- 面包屑 -->
+                <div class="bread clearfix">
+                    <!-- 面包屑 -->
+                    <div class="left fl">
+                        <a href="javascript:;">BOSS</a>
+                        <span>></span>
+                        <a href="javascript:;">撮合管理</a>
+                        <span>></span>
+                        <a href="javascript:;">需求池</a>
+                    </div>
+                    <!-- 按钮组 -->
+                    <div class="btn-group fr">
+                        <a class="inline white" href="javascript:;">
+                            <span class="iconfont icon-luru-xianxing"></span>
+                            录入产品
+                        </a>
+                        <a class="inline white" href="javascript:;">
+                            <span class="iconfont icon-daochuexcel"></span>
+                            帮客户传EXCEL
+                        </a>
+                        <a class="inline white" href="javascript:;">
+                            <span class="iconfont icon-yewubaobiao"></span>
+                            订单列表
+                        </a>
+                        <a class="inline white" href="javascript:;">
+                            <span class="iconfont icon-yonghuluru"></span>
+                            录入客户
+                        </a>
+                    </div>
+                </div>
+                <!-- 标题 -->
+                <div class="title font16">
+                    <a class="inline white on" href="javascript:;">铝箔</a>
+                    <a class="inline white pore" href="javascript:;">铝锭
+                        <div class="red-num">15</div>
+                    </a>
+                    <a class="inline white" href="javascript:;">铝棒</a>
+                </div>
+                <!-- 操作 -->
+                <div class="ope font16">
+                    <select class="sec font16">
+                        <option class="font16" value="有效需求">有效需求</option>
+                        <option class="font16" value="无效需求">无效需求</option>
+                    </select>
+                    <a class="inline do able" href="javascript:;">
+                        <span class="iconfont icon-jia"></span>
+                        新建
+                    </a>
+                    <a class="inline do noable" href="javascript:;">
+                        <span class="iconfont icon-bianji-copy"></span>
+                        编辑
+                    </a>
+                    <a class="inline do noable" href="javascript:;">
+                        <span class="iconfont icon-icon_del"></span>
+                        删除
+                    </a>
+                    <a class="inline do noable" href="javascript:;">
+                        <span class="iconfont icon-navicon-wlpp"></span>
+                        撮合匹配
+                    </a>
+                    <a class="inline do able" href="javascript:;">
+                        <span class="iconfont icon-yiwanchengdingdan"></span>
+                        生成预定单
+                    </a>
+                    <a class="inline do noable" href="javascript:;">
+                        <span class="iconfont icon-yudingshibai"></span>
+                        置为失效
+                    </a>
+                    <a class="inline do noable" href="javascript:;">
+                        <span class="iconfont icon-daoru"></span>
+                        导出
+                    </a>
+                </div>
+                <!-- 筛选 -->
+                <div class="filter font16 pt15">
+                    <div class="line">
+                        <input class="font16 mb10" type="text" placeholder="需求编号">
+                        <input class="font16 mb10" type="text" placeholder="公司名称">
+                        <input class="font16 mb10" type="text" placeholder="联系人">
+                        <input class="font16 mb10" type="text" placeholder="手机">
+                        <input class="font16 mb10" type="text" placeholder="品名">
+                        <input class="font16 mb10" type="text" placeholder="牌号">
+                        <input class="font16 mb10" type="text" placeholder="宽度">
+                        <input class="font16 mb10" type="text" placeholder="厚度">
+                    </div>
+                    <div class="line">
+                        <input class="font16 mb15" type="text" placeholder="价格">
+                        <input class="font16 mb15" type="text" placeholder="数量">
+                        <select class="sec font16 mb15">
+                            <option class="font16" value="地区">地区</option>
+                            <option class="font16" value="长沙">长沙</option>
+                        </select>
+                        <select class="sec font16 mb15">
+                            <option class="font16" value="需求类型">需求类型</option>
+                            <option class="font16" value="长期需求">长期需求</option>
+                        </select>
+                        <select class="sec font16 mb15">
+                            <option class="font16" value="结算方式">结算方式</option>
+                            <option class="font16" value="银联卡">银联卡</option>
+                        </select>
+                        <select class="sec font16 mb15">
+                            <option class="font16" value="交易方式">交易方式</option>
+                            <option class="font16" value="银联卡">银联卡</option>
+                        </select>
+                        <select class="sec font16 mb15">
+                            <option class="font16" value="有效期">有效期</option>
+                            <option class="font16" value="1年">1年</option>
+                        </select>
+                        <a class="inline ml20 pl10 pr10 search white" href="javascript:;">
+                            <span class="iconfont icon-sousuo"></span>
+                            搜索
+                        </a>
+                    </div>
+                </div>
+                <!-- 表格 -->
+                <table style="width: 100%;" class="tc mt15 font14 table">
+                    <thead class="thead">
+                        <tr class="tc">
+                            <td>需求编号</td>
+                            <td>公司名称</td>
+                            <td>联系人</td>
+                            <td>手机</td>
+                            <td>交易员</td>
+                            <td>品名</td>
+                            <td>牌号</td>
+                            <td>厚度</td>
+                            <td>宽度</td>
+                            <td>价格</td>
+                            <td>数量</td>
+                            <td>地区</td>
+                            <td>交期</td>
+                            <td>发布时间</td>
+                            <td>报价</td>
+                        </tr>
+                    </thead>
+                    <tbody class="tbd">
+                        <tr>
+                            <td><span class="pai pore">XO10012</span></td>
+                            <td>河南蓝火实业有限公司</td>
+                            <td>张三</td>
+                            <td>13565658989</td>
+                            <td>邓盈</td>
+                            <td>铝箔</td>
+                            <td>1235</td>
+                            <td>0.007</td>
+                            <td>500</td>
+                            <td>19800</td>
+                            <td>5t</td>
+                            <td>南京</td>
+                            <td>2天</td>
+                            <td>2分钟前</td>
+                            <td><span class="orange">3</span>条</td>
+                        </tr>
+                        <tr>
+                            <td><span class="on pore">XO10012</span></td>
+                            <td>河南蓝火实业有限公司</td>
+                            <td>张三</td>
+                            <td>13565658989</td>
+                            <td>邓盈</td>
+                            <td>铝箔</td>
+                            <td>1235</td>
+                            <td>0.007</td>
+                            <td>500</td>
+                            <td>19800</td>
+                            <td>5t</td>
+                            <td>南京</td>
+                            <td>2天</td>
+                            <td>2分钟前</td>
+                            <td><span class="orange">3</span>条</td>
+                        </tr>
+                        <tr>
+                            <td><span class="on pore">XO10012</span></td>
+                            <td>河南蓝火实业有限公司</td>
+                            <td>张三</td>
+                            <td>13565658989</td>
+                            <td>邓盈</td>
+                            <td>铝箔</td>
+                            <td>1235</td>
+                            <td>0.007</td>
+                            <td>500</td>
+                            <td>19800</td>
+                            <td>5t</td>
+                            <td>南京</td>
+                            <td>2天</td>
+                            <td>2分钟前</td>
+                            <td><span class="orange">3</span>条</td>
+                        </tr>
+                        <tr>
+                            <td><span class="on pore">XO10012</span></td>
+                            <td>河南蓝火实业有限公司</td>
+                            <td>张三</td>
+                            <td>13565658989</td>
+                            <td>邓盈</td>
+                            <td>铝箔</td>
+                            <td>1235</td>
+                            <td>0.007</td>
+                            <td>500</td>
+                            <td>19800</td>
+                            <td>5t</td>
+                            <td>南京</td>
+                            <td>2天</td>
+                            <td>2分钟前</td>
+                            <td><span class="orange">3</span>条</td>
+                        </tr>
+                        <tr>
+                            <td><span class="on pore">XO10012</span></td>
+                            <td>河南蓝火实业有限公司</td>
+                            <td>张三</td>
+                            <td>13565658989</td>
+                            <td>邓盈</td>
+                            <td>铝箔</td>
+                            <td>1235</td>
+                            <td>0.007</td>
+                            <td>500</td>
+                            <td>19800</td>
+                            <td>5t</td>
+                            <td>南京</td>
+                            <td>2天</td>
+                            <td>2分钟前</td>
+                            <td><span class="orange">3</span>条</td>
+                        </tr>
+                        <tr>
+                            <td><span class="pai pore">XO10012</span></td>
+                            <td>河南蓝火实业有限公司</td>
+                            <td>张三</td>
+                            <td>13565658989</td>
+                            <td>邓盈</td>
+                            <td>铝箔</td>
+                            <td>1235</td>
+                            <td>0.007</td>
+                            <td>500</td>
+                            <td>19800</td>
+                            <td>5t</td>
+                            <td>南京</td>
+                            <td>2天</td>
+                            <td>2分钟前</td>
+                            <td><span class="orange">3</span>条</td>
+                        </tr>
+                        <tr>
+                            <td><span class="on pore">XO10012</span></td>
+                            <td>河南蓝火实业有限公司</td>
+                            <td>张三</td>
+                            <td>13565658989</td>
+                            <td>邓盈</td>
+                            <td>铝箔</td>
+                            <td>1235</td>
+                            <td>0.007</td>
+                            <td>500</td>
+                            <td>19800</td>
+                            <td>5t</td>
+                            <td>南京</td>
+                            <td>2天</td>
+                            <td>2分钟前</td>
+                            <td><span class="orange">3</span>条</td>
+                        </tr>
+                    </tbody>
+                    <tfoot class="tfoot">
+                        <tr>
+                            <td class="tc" colspan="15">
+                                <a href="javascript:;">上一页</a>
+                                <a href="javascript:;">1</a>
+                                <a href="javascript:;">2</a>
+                                <a href="javascript:;">3</a>
+                                <a href="javascript:;">下一页</a>
+                                <a href="javascript:;">尾页</a>
+                                <span class="mr10 black">共100页</span>
+                                <span class="black">转到第</span>
+                                <input type="text">
+                                <span class="mr10 black">页</span>
+                                <a href="javascript:;">GO</a>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <p class="tc black font22 lh24">抱歉，没有找到您需要的记录！</p>
+            </div>
+        </div>
+        <!-- 本页JS -->
+    <script src="js/index.js"></script>
+    </div>
+</body>
+
+</html>
